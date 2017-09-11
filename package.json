@@ -5,7 +5,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "rm -rf dist && ng build && cp -r dist/. /var/www/html/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
