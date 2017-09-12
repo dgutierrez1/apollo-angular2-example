@@ -4,6 +4,7 @@
 .container-home{
     width: 50%;
     margin: auto;
+    height: 90%;
 }
 .jumbotron{
     padding: 1%;
@@ -30,4 +31,33 @@
 /* On mouse-over, add a deeper shadow */
 .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.add-section{
+    position: fixed;
+    bottom: 2%;
+    right: 40vw; 
+    
+    // height: 5]0px;
+    //border: solid 1px black;
+    width: 20vw;
+    text-align: center;
+}
+.add-button{
+    color: white;
+    height: 100%;
+    background-color: darkorange;
+    // tex
+}
+.add-panel{
+    background-color: black;
+    color: white;
+    
+}
+#addButton{
+    color: white;
+}
+
+.add-section:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    
 }

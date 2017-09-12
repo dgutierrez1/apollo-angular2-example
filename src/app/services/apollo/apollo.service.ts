@@ -17,6 +17,17 @@ query {
   }
 }
 `;
+const addMutation = gql`
+mutation add($title: String!) {
+  add(title: $title) {
+
+    title
+    id
+    img
+  }
+}
+
+`;
 
 interface QueryResponse {
   memes
@@ -37,6 +48,18 @@ export class ApolloService {
 
   getQueryObservable() {
     return this.query;
+  }
+  createItem(addTitle: string) {
+    this.apollo.mutate({
+      mutation: addMutation,
+      variables: {
+        title: addTitle
+      }
+    }).subscribe(({ data }) => {
+      //alert('got data' + data);
+    }, (error) => {
+      alert('there was an error sending the query' + error);
+    });
   }
 
 }

@@ -14,8 +14,20 @@
 
 
   </div>
-  <div>
-    
-  </div>
-
+  
 </div>
+    <div class="add-section" (click)="showAddPanel()">
+      <div *ngIf="!addManager.visible"class="add-button">
+        <h3>ADD</h3>
+      </div >
+      <div class="add-panel" *ngIf="addManager.visible">
+        <h3 style="margin-bottom: 20px;">Agregar item</h3>
+        <p style="margin:0;">Ingrese titulo:</p>
+        <input [(ngModel)]="addManager.meme.title" type="text" >
+        <p>{{addManager.meme.title}}</p>
+        <button id="addButton" (click)="addItem()">Add</button>
+      </div>
+    </div>
+    <div >
+
+    </div>

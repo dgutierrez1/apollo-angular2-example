@@ -1,3 +1,4 @@
+import { FormsModule } from '@angular/forms';
 import { ApolloService } from './services/apollo/apollo.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -29,7 +30,8 @@ export function provideClient(): ApolloClient {
   imports: [
     BrowserModule,
     AlertModule.forRoot(),
-    ApolloModule.forRoot(provideClient)
+    ApolloModule.forRoot(provideClient),
+    FormsModule
   ],
   providers: [ApolloService],
   bootstrap: [AppComponent]
